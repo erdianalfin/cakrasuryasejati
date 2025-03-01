@@ -7956,7 +7956,7 @@ textarea.form-control-lg {
 }
 
 .fw-bold {
-  font-weight: 700 !important;
+  font-weight: bold !important;
 }
 
 .fw-semibold {
@@ -11001,4 +11001,43 @@ header.masthead h1, header.masthead .h1 {
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: cover;
+}
+
+ol {
+  list-style: none;
+  counter-reset: list-counter;
+  padding-left: 0;
+}
+
+ol li {
+  position: relative;
+  counter-increment: list-counter;
+  padding-left: 40px; /* Memberikan jarak dari angka */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: black; /* Warna teks dalam lingkaran */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.img-satpam {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  background-position: center;
 }
