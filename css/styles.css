@@ -11074,3 +11074,30 @@ ol li::before {
   bottom: 0px;
   margin-top: auto; /* Membuat elemen ini selalu di posisi bawah */
 }
+
+.direksi {
+position: relative;
+padding-left: 1rem;
+margin-bottom: 2rem;
+}
+
+.direksi::before {
+  content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 576px) { /* Untuk layar kecil seperti HP */
+  .row .col-6 img.direksi-img {
+      height: 240px !important; /* Atur tinggi gambar lebih kecil di HP */
+  }
+
+  .direksi-name {
+    font-size: 18px;
+  }
+}
